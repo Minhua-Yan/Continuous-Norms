@@ -135,7 +135,7 @@ for g = 2:gen
     
     
     
-   %% social learning error
+  %% social learning error
     fFreq = fFreq*Trans;
     fFreq = fFreq/sum(fFreq);
     pdf_Err_Gen(g,:) = fFreq;
