@@ -73,6 +73,7 @@ errFreq = errFreq/sum(errFreq);
 % If a cultural parent will produce cultural children out of the trait range we keep track of, 
 %    we assume this cultural parent does not reproduce.
 %    therefore, the probability of the first and last (nEbins-1)/2 bins transitioning to any other bin is 0
+% To make sure the results are accurate, binRange has to be big enough
 
 % The element on the ith row and jth column gives the probability 
 %    that a cultural parent in the ith bin produces a cultural child in the jth bin in xM
