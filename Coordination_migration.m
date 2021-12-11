@@ -133,26 +133,9 @@ for g = 2:gen
     fFreq = fFreq;
     Mean_Gen(g,3) = sum(fFreq.*xM);
     
-%   % trying to learn the mean of two cultural parents
-%     fCombM = transpose(fFreq)*fFreq;                                        %a matrix containing probabilities of different combinations                                                 %the number of averages of combinations
-%     fCombMean = zeros(1,2*nbins-1);                                         %a rwo containing the probabilities of different averages of combinations
-%     for i = 1:nbins
-%         for j = 1:i
-%            fCombMean(1,i) = fCombMean(1,i) +fCombM(j,i+1-j); 
-%         end
-%     end
-%     for i = nbins+1 : 2*nbins-1
-%         for j = i+1-nbins :nbins
-%             fCombMean(1,i) = fCombMean(1,i) +fCombM(j,i+1-j);
-%         end
-%     end
-%     fFreq = fCombMean(1:2:end) + [1/2*fCombMean(2:2:end),0]+[0,1/2*fCombMean(2:2:end)];   
-%     pdf_SL_Gen(g,:)=fFreq; 
-%     Mean_Gen(g,3) = sum(fFreq.*xM);    
-      
     
     
-    % social learning error
+   %% social learning error
     fFreq = fFreq*Trans;
     fFreq = fFreq/sum(fFreq);
     pdf_Err_Gen(g,:) = fFreq;
